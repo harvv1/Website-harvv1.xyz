@@ -26,6 +26,10 @@ header, footer {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
+p {
+  white-space: pre-line;
+}
+
 h1 {
   font-size: 50px;
 }

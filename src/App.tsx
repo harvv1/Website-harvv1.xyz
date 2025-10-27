@@ -25,12 +25,12 @@ function App() {
           <div className="project">
             <h3 className="glow">balla projex 1</h3>
             <button id="myButton" className="glow" onClick={handleClick}>
-              Click me
+              Verse Generator
             </button>
             {
               //<div id="output"></div>
             }
-            <pre>{message}</pre>
+            <p>{message}</p>
           </div>
         </section>
         <footer>
