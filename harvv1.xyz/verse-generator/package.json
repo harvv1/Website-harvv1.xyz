@@ -1,11 +1,9 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "description": "website",
+  "name":"verse-generator",
+  "version":"1.0.0",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx ts-node src/index.ts"
+  "scripts":{
+    "verse":"npx ts-node src/generate.ts"
   },
   "dependencies": {
     "tsc": "^2.0.4",
