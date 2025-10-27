@@ -14,18 +14,21 @@ function App() {
       <div>
         <header>
           <h1 className="glow">Harvey Aaron</h1>
-          <p>balla</p>
         </header>
         <section id="about">
           <h2 className="glow">About Me</h2>
-          <p>ima balla</p>
+          <p>
+            Final year Bsc Computer Science student at Queen's University
+            Belfast, passionate about programming, game development and cloud
+            computing.
+          </p>
         </section>
         <section id="projects">
           <h2 className="glow">Projects</h2>
           <div className="project">
-            <h3 className="glow">balla projex 1</h3>
+            <h3 className="glow">Verse Generator</h3>
             <button id="myButton" className="glow" onClick={handleClick}>
-              Verse Generator
+              Generate
             </button>
             {
               //<div id="output"></div>

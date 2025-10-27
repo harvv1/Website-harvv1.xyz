@@ -40,22 +40,23 @@ h2, h3 {
 
 a {
   color: var(--secondary);
-  text-decoration: none;
-}
-
-a:hover {
   text-decoration: underline;
 }
 
+/*a:hover {*/
+/*  text-decoration: underline;*/
+/*}*/
+
 .project {
-/*  border-left: 3px solid var(--primary);*/
+  border: 3px solid var(--tertiary);
   padding: 1rem;
   margin: 1rem 0;
+  background-color: rgba(179, 0, 0, 0.1);
 }
 
-.project:hover {
-  background-color: rgba(179, 0, 0, 0.1);
-}   
+/*.project:hover {*/
+/*  background-color: rgba(179, 0, 0, 0.1);*/
+/*}   */
 
 .glow {
   color: var(--secondary);
@@ -84,11 +85,11 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: --primary;
+  border-color: var(--secondary);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /*outline: 4px auto -webkit-focus-ring-color;*/
 }
 
 /*@media (prefers-color-scheme: light) {
