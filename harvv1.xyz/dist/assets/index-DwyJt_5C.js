@@ -105,43 +105,39 @@ Error generating stack: `+u.message+`
  For he that soweth in his flesh, of the flesh also shall reap corruption.
  But he that soweth in the spirit, of the spirit shall reap life everlasting.
 `,11:`
- ☩ Job 31:1 ☩
-
- I made a covenant with my eyes, that I would not so much as think upon a virgin.
-`,12:`
  ☩ Jeremiah 29:11 ☩
 
  For I know the thoughts that I think towards you, saith the Lord,
  thoughts of peace and not of affliction, to give you an end and patience.
-`,13:`
+`,12:`
  ☩ Isaiah 40:30-31 ☩
 
  Youths shall faint and labour: and young men shall fall by infirmity.
  But they that hope in the Lord shall renew their strength: they shall take wings as eagles;
  they shall run and not be weary; they shall walk and not faint.
-`,14:`
+`,13:`
  ☩ Phillipians 4:13 ☩
 
  I can do all these things in him who strengtheneth me.
-`,15:`
+`,14:`
  ☩ Proverbs 24:16 ☩
 
  For a just man shall fall seven times and shall rise again:
  but the wicked shall fall down into evil.
-`,16:`
+`,15:`
  ☩ 1 Timothy 2:5-6 ☩
 
  For there is one God, and one mediator of God and men, the man Christ Jesus:
  Who gave himself a redemption for all, a testimony in due times.
-`,17:`
+`,16:`
  ☩ 1 Peter 5:10 ☩
 
  But the God of all grace, who hath called us into his eternal glory in Christ Jesus,
  after you have suffered a little, will himself perfect you,
  and confirm you, and establish you.
-`,18:`
+`,17:`
  ☩ Luke 6:37 ☩
 
  Judge not, and you shall not be judged. Condemn not, and you shall not be condemned.
  Forgive, and you shall be forgiven.
-`};console.clear();const Av=()=>{const M=Object.values(um);return M[Math.floor(Math.random()*M.length)]};console.log(Av());function em(){const[M,vl]=Ev.useState(""),F=()=>{vl(Av())};return Al.jsx(Al.Fragment,{children:Al.jsxs("div",{children:[Al.jsxs("header",{children:[Al.jsx("h1",{className:"glow",children:"Harvey Aaron"}),Al.jsx("p",{children:"balla"})]}),Al.jsxs("section",{id:"about",children:[Al.jsx("h2",{className:"glow",children:"About Me"}),Al.jsx("p",{children:"ima balla"})]}),Al.jsxs("section",{id:"projects",children:[Al.jsx("h2",{className:"glow",children:"Projects"}),Al.jsxs("div",{className:"project",children:[Al.jsx("h3",{className:"glow",children:"balla projex 1"}),Al.jsx("button",{id:"myButton",className:"glow",onClick:F,children:"Click me"}),Al.jsx("p",{children:M})]})]}),Al.jsx("footer",{children:Al.jsx("p",{children:"Contact: harveya456@gmail.com"})})]})})}am.createRoot(document.getElementById("root")).render(Al.jsx(Ev.StrictMode,{children:Al.jsx(em,{})}));
+`};console.clear();const Av=()=>{const M=Object.values(um);return M[Math.floor(Math.random()*M.length)]};console.log(Av());function em(){const[M,vl]=Ev.useState(""),F=()=>{vl(Av())};return Al.jsx(Al.Fragment,{children:Al.jsxs("div",{children:[Al.jsxs("header",{children:[Al.jsx("h1",{className:"glow",children:"Harvey Aaron"}),Al.jsx("p",{children:"balla"})]}),Al.jsxs("section",{id:"about",children:[Al.jsx("h2",{className:"glow",children:"About Me"}),Al.jsx("p",{children:"ima balla"})]}),Al.jsxs("section",{id:"projects",children:[Al.jsx("h2",{className:"glow",children:"Projects"}),Al.jsxs("div",{className:"project",children:[Al.jsx("h3",{className:"glow",children:"balla projex 1"}),Al.jsx("button",{id:"myButton",className:"glow",onClick:F,children:"Click me"}),Al.jsx("pre",{children:M})]})]}),Al.jsx("footer",{children:Al.jsx("p",{children:"Contact: harveya456@gmail.com"})})]})})}am.createRoot(document.getElementById("root")).render(Al.jsx(Ev.StrictMode,{children:Al.jsx(em,{})}));
