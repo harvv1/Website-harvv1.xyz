@@ -13,7 +13,7 @@ body {
   /*font-family: 'Arial', sans-serif;*/
   font-family: "Lucida Console", "Courier New", monospace;
   text-align:center;
-  font-size: 15px;
+  font-size: 19px;
 }
 
 header, footer {
@@ -49,8 +49,9 @@ a {
 
 .project {
   border: 3px solid var(--tertiary);
-  padding: 1rem;
-  margin: 1rem 0;
+  max-width: 1100px;
+  padding: 20px;
+  margin: 40px auto;
   background-color: rgba(179, 0, 0, 0.1);
 }
 

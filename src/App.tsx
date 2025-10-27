@@ -19,7 +19,8 @@ function App() {
           <h2 className="glow">About Me</h2>
           <p>
             Final year Bsc Computer Science student at Queen's University
-            Belfast, passionate about programming, game development and cloud
+            Belfast,
+            <br /> passionate about programming, game development and cloud
             computing.
           </p>
         </section>
