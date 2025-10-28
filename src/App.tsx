@@ -3,10 +3,27 @@ import { generate } from "../verse-generator/src/generate.ts";
 import "./App.css";
 
 function App() {
-  //const [count, setCount] = useState(0)
   const [message, setMessage] = useState<string>("");
+  const [isShow, setIsShow] = useState(false);
+
   const handleClick = () => {
     setMessage(generate());
+  };
+
+  const toggleOnClick = () => {
+    setIsShow(!isShow);
+  };
+
+  const verseGenerator = () => {
+    return (
+      <div className="project">
+        <h3 className="glow"></h3>
+        <button id="myButton" className="glow" onClick={handleClick}>
+          Generate
+        </button>
+        <p>{message}</p>
+      </div>
+    );
   };
 
   return (
@@ -24,16 +41,10 @@ function App() {
         </section>
         <section id="projects">
           <h2 className="glow">Projects</h2>
-          <div className="project">
-            <h3 className="glow">Verse Generator</h3>
-            <button id="myButton" className="glow" onClick={handleClick}>
-              Generate
-            </button>
-            {
-              //<div id="output"></div>
-            }
-            <p>{message}</p>
-          </div>
+          <button id="myButton" className="glow" onClick={toggleOnClick}>
+            Verse Generator
+          </button>
+          {isShow && verseGenerator()}
         </section>
         <footer>
           <p>Contact: harveya456@gmail.com</p>
