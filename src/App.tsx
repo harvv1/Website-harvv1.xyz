@@ -48,7 +48,14 @@ function App() {
             </p>
           </section>
           <h2 className="glow">Projects</h2>
-          <button id="myButton" className="glow" onClick={toggleOnClick}>
+          <button
+            id="myButton"
+            className="glow"
+            onClick={() => {
+              toggleOnClick();
+              handleClick();
+            }}
+          >
             Verse Generator
           </button>
         </div>
