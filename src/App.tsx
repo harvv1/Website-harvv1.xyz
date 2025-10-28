@@ -21,15 +21,16 @@ function App() {
           <h1 className="glow">Verse Generator</h1>
         </header>
         <div className="project">
-          <button id="myButton" className="glow" onClick={handleClick}>
-            Generate
-          </button>
           <p>{message}</p>
         </div>
         <br></br>
         <div>
           <button id="myButton" className="glow" onClick={toggleOnClick}>
-            home
+            Home
+          </button>
+          &nbsp; &nbsp;
+          <button id="myButton" className="glow" onClick={handleClick}>
+            Generate
           </button>
         </div>
       </>
