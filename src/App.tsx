@@ -16,36 +16,45 @@ function App() {
 
   const verseGenerator = () => {
     return (
-      <div className="project">
-        <h3 className="glow"></h3>
-        <button id="myButton" className="glow" onClick={handleClick}>
-          Generate
-        </button>
-        <p>{message}</p>
-      </div>
+      <>
+        <div className="project">
+          <h3 className="glow"></h3>
+          <button id="myButton" className="glow" onClick={handleClick}>
+            Generate
+          </button>
+          <p>{message}</p>
+        </div>
+        <div>
+          <button id="myButton" className="glow" onClick={toggleOnClick}>
+            home
+          </button>
+        </div>
+      </>
     );
   };
 
   return (
     <>
-      <div>
-        <header>
-          <h1 className="glow">Harvey Aaron</h1>
-        </header>
-        <section id="about">
-          <h2 className="glow">About Me</h2>
-          <p>
-            Final year Bsc Computer Science student at Queen's University
-            Belfast.
-          </p>
-        </section>
-        <section id="projects">
+      {!isShow && (
+        <div>
+          <header>
+            <h1 className="glow">Harvey Aaron</h1>
+          </header>
+          <section id="about">
+            <h2 className="glow">About Me</h2>
+            <p>
+              Final year Bsc Computer Science student at Queen's University
+              Belfast.
+            </p>
+          </section>
           <h2 className="glow">Projects</h2>
           <button id="myButton" className="glow" onClick={toggleOnClick}>
             Verse Generator
           </button>
-          {isShow && verseGenerator()}
-        </section>
+        </div>
+      )}
+      <div>
+        <section id="projects">{isShow && verseGenerator()}</section>
         <footer>
           <p>Contact: harveya456@gmail.com</p>
         </footer>
