@@ -17,13 +17,16 @@ function App() {
   const verseGenerator = () => {
     return (
       <>
+        <header>
+          <h1 className="glow">Verse Generator</h1>
+        </header>
         <div className="project">
-          <h3 className="glow"></h3>
           <button id="myButton" className="glow" onClick={handleClick}>
             Generate
           </button>
           <p>{message}</p>
         </div>
+        <br></br>
         <div>
           <button id="myButton" className="glow" onClick={toggleOnClick}>
             home
@@ -47,6 +50,7 @@ function App() {
               Belfast.
             </p>
           </section>
+          <br></br>
           <h2 className="glow">Projects</h2>
           <button
             id="myButton"
