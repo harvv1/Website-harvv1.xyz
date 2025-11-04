@@ -18,8 +18,9 @@ function App() {
   const verseGenerator = () => {
     return (
       <>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <header>
-          <h1 className="glow">♱ Verse Generator ♱</h1>
+          <h1 className="glow">Verse Generator</h1>
         </header>
         <div className="project">
           <p>{message}</p>
@@ -56,8 +57,9 @@ function App() {
 
     return (
       <>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <header>
-          <h1 className="glow">♱ Digital Rosary ♱</h1>
+          <h1 className="glow">Digital Rosary</h1>
         </header>
 
         <div className="project">
@@ -70,19 +72,20 @@ function App() {
           </button>
           &nbsp; &nbsp;
           <button
-            id="myButton"
-            className="glow"
-            onClick={() => toggleOnClick("")}
-          >
-            Home
-          </button>
-          &nbsp; &nbsp;
-          <button
             onClick={nextPrayer}
             disabled={index === prayers.length - 1}
             className="glow"
           >
             Next →
+          </button>
+          <br></br>
+          <br></br>
+          <button
+            id="myButton"
+            className="glow"
+            onClick={() => toggleOnClick("")}
+          >
+            Home
           </button>
         </div>
 
@@ -96,6 +99,7 @@ function App() {
   const home = () => {
     return (
       <div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <header>
           <h1 className="glow">Harvey Aaron</h1>
         </header>
@@ -118,7 +122,8 @@ function App() {
         >
           Verse Generator
         </button>
-        &nbsp;&nbsp;
+        <br></br>
+        <br></br>
         <button
           id="myButton"
           className="glow"
