@@ -30,7 +30,10 @@ export const dayNames: Record<string, string> = {
 	Sunday: 'Glorious',
 };
 
-export const mysteries: Record<string, string> = {
+export const mysteries: Record<
+	string,
+	Record<string, Record<string, string>>
+> = {
 	Joyful: {
 		1: {
 			name: 'The Annunciation',

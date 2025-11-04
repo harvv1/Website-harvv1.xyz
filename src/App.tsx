@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const [message, setMessage] = useState<string>("");
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState<string>("");
 
   const handleClick = () => {
     setMessage(generate());
@@ -26,11 +26,15 @@ function App() {
         </div>
         <br></br>
         <div>
-          <button id="myButton" className="glow" onClick={toggleOnClick}>
+          <button
+            id="myButton"
+            className="glow"
+            onClick={() => toggleOnClick("")}
+          >
             Home
           </button>
           &nbsp; &nbsp;
-          <button id="myButton" className="glow" onClick={handleClick}>
+          <button id="myButton" className="glow" onClick={() => handleClick()}>
             Generate
           </button>
         </div>
@@ -65,7 +69,11 @@ function App() {
             ← Back
           </button>
           &nbsp; &nbsp;
-          <button id="myButton" className="glow" onClick={toggleOnClick}>
+          <button
+            id="myButton"
+            className="glow"
+            onClick={() => toggleOnClick("")}
+          >
             Home
           </button>
           &nbsp; &nbsp;
