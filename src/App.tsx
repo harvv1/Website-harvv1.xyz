@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { generate } from "../verse-generator/src/generate.ts";
+import { getAllPrayers } from "../DigitalRosary/src/digital-rosary.ts";
 import "./App.css";
 
 function App() {
@@ -10,15 +11,15 @@ function App() {
     setMessage(generate());
   };
 
-  const toggleOnClick = () => {
-    setIsShow(!isShow);
+  const toggleOnClick = (page: string) => {
+    setIsShow(page);
   };
 
   const verseGenerator = () => {
     return (
       <>
         <header>
-          <h1 className="glow">Verse Generator</h1>
+          <h1 className="glow">♱ Verse Generator ♱</h1>
         </header>
         <div className="project">
           <p>{message}</p>
@@ -37,36 +38,106 @@ function App() {
     );
   };
 
-  return (
-    <>
-      {!isShow && (
-        <div>
-          <header>
-            <h1 className="glow">Harvey Aaron</h1>
-          </header>
-          <section id="about">
-            <h2 className="glow">About Me</h2>
-            <p>
-              Final year Bsc Computer Science student at Queen's University
-              Belfast.
-            </p>
-          </section>
-          <br></br>
-          <h2 className="glow">Projects</h2>
+  const [index, setIndex] = useState(0);
+  const digitalRosary = () => {
+    const prayers = getAllPrayers();
+
+    const nextPrayer = () => {
+      if (index < prayers.length - 1) setIndex(index + 1);
+    };
+
+    const prevPrayer = () => {
+      if (index > 0) setIndex(index - 1);
+    };
+
+    return (
+      <>
+        <header>
+          <h1 className="glow">♱ Digital Rosary ♱</h1>
+        </header>
+
+        <div className="project">
+          <p>{prayers[index]}</p>
+        </div>
+
+        <div className="glow">
+          <button onClick={prevPrayer} disabled={index === 0} className="glow">
+            ← Back
+          </button>
+          &nbsp; &nbsp;
+          <button id="myButton" className="glow" onClick={toggleOnClick}>
+            Home
+          </button>
+          &nbsp; &nbsp;
           <button
-            id="myButton"
+            onClick={nextPrayer}
+            disabled={index === prayers.length - 1}
             className="glow"
-            onClick={() => {
-              toggleOnClick();
-              handleClick();
-            }}
           >
-            Verse Generator
+            Next →
           </button>
         </div>
-      )}
+
+        <p className="glow">
+          {index + 1} / {prayers.length}
+        </p>
+      </>
+    );
+  };
+
+  const home = () => {
+    return (
       <div>
-        <section id="projects">{isShow && verseGenerator()}</section>
+        <header>
+          <h1 className="glow">Harvey Aaron</h1>
+        </header>
+        <section id="about">
+          <h2 className="glow">About Me</h2>
+          <p>
+            Final year Bsc Computer Science student at Queen's University
+            Belfast.
+          </p>
+        </section>
+        <br></br>
+        <h2 className="glow">Projects</h2>
+        <button
+          id="myButton"
+          className="glow"
+          onClick={() => {
+            toggleOnClick("verse");
+            handleClick();
+          }}
+        >
+          Verse Generator
+        </button>
+        &nbsp;&nbsp;
+        <button
+          id="myButton"
+          className="glow"
+          onClick={() => {
+            toggleOnClick("rosary");
+          }}
+        >
+          Digital Rosary
+        </button>
+      </div>
+    );
+  };
+
+  const switchPage = () => {
+    if (isShow === "verse") {
+      return verseGenerator();
+    } else if (isShow === "rosary") {
+      return digitalRosary();
+    } else {
+      return home();
+    }
+  };
+
+  return (
+    <>
+      <div>
+        <section id="projects">{switchPage()}</section>
         <footer>
           <p>Contact: harveya456@gmail.com</p>
         </footer>
